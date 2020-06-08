@@ -43,5 +43,6 @@ export const styles = StyleSheet.create({
         color: 'white',
         fontSize: 15,
         textAlign: 'center',
+        fontFamily:Platform.OS==="android" ? 'NunitoSans-BlackItalic' : 'something.ttf',
       },
     });
