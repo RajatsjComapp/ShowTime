@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
         color: 'white',
         fontSize:15,
         width:'70%',
-        fontFamily:Platform.OS==="android" ? 'NunitoSans-BlackItalic' : 'something.ttf',
+        fontFamily:Platform.OS==="android" ? 'NunitoSans-BlackItalic' : 'BlackItalic',
       },
       footer: {
         padding: 10,
@@ -43,6 +43,6 @@ export const styles = StyleSheet.create({
         color: 'white',
         fontSize: 15,
         textAlign: 'center',
-        fontFamily:Platform.OS==="android" ? 'NunitoSans-BlackItalic' : 'something.ttf',
+        fontFamily:Platform.OS==="android" ? 'NunitoSans-BlackItalic' : 'NunitoSans-BlackItalic',
       },
     });

@@ -37,13 +37,13 @@ export default styles = StyleSheet.create({
     {
       fontSize:16,
       color:'white',
-      fontFamily:Platform.OS==="android" ? 'NunitoSans-Bold' : 'something.ttf',
+      fontFamily:Platform.OS==="android" ? 'NunitoSans-Bold' : 'NunitoSans-Bold',
       width:(windowWidth - (250)) / 2,
     },
     icon:{height:20,width:20,marginRight:10,marginTop:15},
     button:{marginTop:25,marginBottom:15,backgroundColor:'white',height:50,justifyContent:'center',alignItems:'center',borderRadius:10, shadowOffset: {height: 7,width:5},elevation: 10},
-    buttonText:{color:'red',fontSize:15,fontFamily:Platform.OS==="android" ? 'NunitoSans-Black' : 'something.ttf'},
-    outlink:{color:'white',fontSize:13,fontFamily:Platform.OS==="android" ? 'NunitoSans-Black' : 'something.ttf'},
-    outtext:{color:'white',fontSize:13,fontFamily:Platform.OS==="android" ? 'NunitoSans-Bold' : 'something.ttf'}
+    buttonText:{color:'red',fontSize:15,fontFamily:Platform.OS==="android" ? 'NunitoSans-Black' : 'NunitoSans-Black'},
+    outlink:{color:'white',fontSize:13,fontFamily:Platform.OS==="android" ? 'NunitoSans-Black' : 'NunitoSans-Black'},
+    outtext:{color:'white',fontSize:13,fontFamily:Platform.OS==="android" ? 'NunitoSans-Bold' : 'NunitoSans-Bold'}
 
   });

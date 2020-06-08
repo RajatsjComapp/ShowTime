@@ -51,13 +51,13 @@ export const styles = StyleSheet.create({
         fontSize:25,
         marginTop: (windowWidth - (300)) / 2,
         marginLeft: (windowWidth - (700)) / 2,
-        fontFamily:Platform.OS==="android" ? 'NunitoSans-Bold' : 'something.ttf',
+        fontFamily:Platform.OS==="android" ? 'NunitoSans-Bold' : 'NunitoSans-Bold',
         color:'white',
     },
     OverviewText:
     {
       fontSize:15,
-      fontFamily:Platform.OS==="android" ? 'NunitoSans-BoldItalic' : 'something.ttf',
+      fontFamily:Platform.OS==="android" ? 'NunitoSans-BoldItalic' : 'NunitoSans-BoldItalic',
       color:'white',
       margin:15
     },
