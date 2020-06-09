@@ -1,14 +1,13 @@
 import React from 'react';
 import {StyleSheet,Dimensions} from 'react-native';
-var windowWidth = Dimensions.get('window').height;
-var windowHeight = Dimensions.get('window').width;
+var windowHeight = Dimensions.get('window').height;
 export const styles = StyleSheet.create({
-    container:
-    {
-      flex:1,
-      height: windowHeight + (Platform.OS === 'ios' ? 700 : 500),
-      backgroundColor:'#192841',
-    },
+  container:
+  {
+    flex:1,
+    height: windowHeight,
+    backgroundColor:'#192841',
+  },
     items: {
         flexDirection:'column',
         margin:15
@@ -24,6 +23,19 @@ export const styles = StyleSheet.create({
         fontSize:15,
         width:'70%',
         fontFamily:Platform.OS==="android" ? 'NunitoSans-BlackItalic' : 'BlackItalic',
+      },
+      Header:
+      {
+        height: (windowHeight)/14,
+        backgroundColor:'#BF0000',
+        alignItems:'center'
+      },
+      HeaderText:
+      {
+       fontSize:25,
+       fontFamily:'NunitoSans-Black',
+       color:'white',
+       margin:6
       },
       footer: {
         padding: 10,

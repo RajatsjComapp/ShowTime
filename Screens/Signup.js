@@ -34,17 +34,20 @@ export default function Signup({navigation})
     }
 
 storeData=()=> {
-      firebase.auth().createUserWithEmailAndPassword(email,Password)
+  firebase.database().ref('Users/').set({
+    username,
+    email
+  }).then(firebase.auth().createUserWithEmailAndPassword(email,Password)
       .then(()=>
       {
-        alert('Welcome to the Application')
         navigation.navigate('Dash')
         
       })
       .catch(()=>{
-        alert(Error)
+        Alert.alert("Signup Failed",'')
       }
       )
+  )
 }
 
 btnSignUpTapped = () =>
@@ -88,6 +91,7 @@ btnSignUpTapped = () =>
           <Image source={require('../icons/username.png')} style={styles.icon}/>
           <TextInput style ={styles.inputText}
                 placeholder="UserName"
+                placeholderTextColor="#D9FFFF"
                 keyboardType='default'
                 onChangeText={(username) => setUser(username)}
               />
@@ -100,6 +104,7 @@ btnSignUpTapped = () =>
           <TextInput style ={styles.inputText}
                 placeholder="Password"
                 keyboardType='default'
+                placeholderTextColor="#D9FFFF"
                 secureTextEntry={ConfirmSecureTextEntry?true:false}
                 onChangeText={(password) => setPassword(password)}
             />
@@ -117,6 +122,7 @@ btnSignUpTapped = () =>
           <TextInput style ={styles.inputText}
                 placeholder="Confirm Password"
                 keyboardType='default'
+                placeholderTextColor="#D9FFFF"
                 secureTextEntry={ConfirmSecureTextEntry?true:false}
                 onChangeText={(ConfirmPassword) => setCPassword(ConfirmPassword)}
               />
@@ -127,6 +133,7 @@ btnSignUpTapped = () =>
           <Image source={require('../icons/email.png')} style={styles.icon}/>
           <TextInput style ={styles.inputText}
                 placeholder="Email"
+                placeholderTextColor="#D9FFFF"
                 keyboardType='email-address'
                 onChangeText={(email) => setEmail(email)}
               />

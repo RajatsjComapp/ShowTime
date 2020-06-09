@@ -6,6 +6,7 @@ import Display from '../Section/Display.js'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Listing from '../Reusable/Listing.js';
 import Details from '../Reusable/Details';
+import ImageSlider from '../ImageSlider.js';
 export default function Browse ({navigation})
 {
 
@@ -20,7 +21,7 @@ export default function Browse ({navigation})
       <TouchableOpacity onPress={()=>{navigation.navigate('Listing',PopularTV)}}>
         <Text style={styles.MoreButton}>More</Text></TouchableOpacity>
         </View>
-      { <Display items={PopularTV}/> }
+      { <ImageSlider items={PopularTV}/> }
 
 
       <View style={{flexDirection:'row',justifyContent:'space-between'}}>

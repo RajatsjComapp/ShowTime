@@ -1,18 +1,17 @@
 import React  from 'react'
-import { View,SafeAreaView,Image, Text,FlatList} from 'react-native'
+import { View,SafeAreaView,Image, Text,FlatList,StatusBar} from 'react-native'
 import { styles } from '../styles/Dashboard';
 import { ScrollView } from 'react-native-gesture-handler';
-
+import Noimage from '../GlobalImage/Noimage.jpg'
 const baseUrl='https://image.tmdb.org/t/p/w500';
-
-
 function Detail({route}) {
    
    const {otherParam}= route.params;
     return (
       <SafeAreaView style={styles.container}>
           <ScrollView>
-        <Image source={{uri:baseUrl+""+otherParam.backdrop_path}} style={styles.DetailImage}/>
+        
+        <Image source={{uri:baseUrl+""+otherParam.backdrop_path}} style={(!(otherParam.original_title)?otherParam.original_name:otherParam.original_title).length >26 ?styles.DetailImage2:styles.DetailImage}/>
    
         <Text style={styles.Title}>{!otherParam.original_title?otherParam.original_name:otherParam.original_title}</Text>
 

@@ -72,6 +72,7 @@ btnLoginTapped = () => {
           <TextInput style ={styles.inputText}
                 placeholder="Email"
                 keyboardType='default'
+                placeholderTextColor="#D9FFFF"
                 onChangeText={(email) => setEmail(email)}
               />
           </View>
@@ -83,6 +84,7 @@ btnLoginTapped = () => {
           <TextInput style ={styles.inputText}
                 placeholder="Password"
                 keyboardType='default'
+                placeholderTextColor="#D9FFFF"
                 secureTextEntry={ConfirmSecureTextEntry?true:false}
                 onChangeText={(password) => setPassword(password)}
 

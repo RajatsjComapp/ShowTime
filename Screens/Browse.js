@@ -6,6 +6,7 @@ import Display from '../Section/Display.js'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Listing from '../Reusable/Listing.js';
 import Details from '../Reusable/Details';
+import ImageSlider from '../ImageSlider.js';
 export default function Browse ({navigation})
 {
 
@@ -20,7 +21,7 @@ export default function Browse ({navigation})
       <TouchableOpacity onPress={()=>{navigation.navigate('Listing',PopularMovie)}}>
         <Text style={styles.MoreButton}>More</Text></TouchableOpacity>
         </View>
-      { <Display items={PopularMovie}/> }
+      { <ImageSlider items={PopularMovie}/> }
       <View style={{flexDirection:'row',justifyContent:'space-between'}}>
         <Text style={styles.Menu}>Trending Daily</Text> 
         <TouchableOpacity onPress={()=>{navigation.navigate('Listing',DailyMovie)}}>
@@ -36,7 +37,7 @@ export default function Browse ({navigation})
         { <Display items={WeeklyMovie}  /> }
     </View>
     <View style={{flexDirection:'row',justifyContent:'space-between'}}>
-        <Text style={styles.Menu}>Latest</Text> 
+        <Text style={styles.Menu}>Top Rated</Text> 
         <TouchableOpacity onPress={()=>{navigation.navigate('Listing',TopRatedMovie)}}>
         <Text style={styles.MoreButton}>More</Text></TouchableOpacity>
         </View>

@@ -48,6 +48,7 @@ export default Listing = (props) =>
       }
  const renderFooter= () => {
     return (
+     
       <View style={styles.footer}>
         <TouchableOpacity
           activeOpacity={0.9}
@@ -64,6 +65,9 @@ export default Listing = (props) =>
 
     return (
       <View style={styles.container}>
+      <View style={styles.Header}>
+      <Text style={styles.HeaderText}>More</Text>
+       </View>
         {loading ? (
           <ActivityIndicator size="large" />
         ) : (
@@ -77,7 +81,7 @@ export default Listing = (props) =>
                 otherParam:item,
               })}>
              <Image source={{uri:baseUrl+""+item.poster_path}} style={{width:100,height:100,borderRadius:15}}/>
-              <Text style={styles.text}>{!item.original_title?item.original_name:item.original_title}({!item.release_date?item.first_air_date:item.release_date})</Text> 
+              <Text style={styles.text}>{!item.original_title?item.original_name:item.original_title}({!item.release_date?item.first_air_date:item.release_date})</Text>
              </TouchableOpacity>
               </View>
             )}
