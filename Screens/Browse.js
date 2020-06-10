@@ -7,10 +7,13 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import Listing from '../Reusable/Listing.js';
 import Details from '../Reusable/Details';
 import ImageSlider from '../ImageSlider.js';
+import { createStackNavigator } from '@react-navigation/stack';
+
 export default function Browse ({navigation})
 {
 
   return (
+
     <SafeAreaView style={styles.container}>
        <View style={styles.Header}>
         <Text style={styles.HeaderText}>Movie</Text>

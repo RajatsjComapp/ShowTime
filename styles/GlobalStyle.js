@@ -24,7 +24,7 @@ export default styles = StyleSheet.create({
     form: {
         flexDirection:'column',
         margin: (windowWidth) /9,
-        marginTop:35
+        marginTop:'5%'
     },
     inner:
     {
@@ -37,7 +37,7 @@ export default styles = StyleSheet.create({
       fontSize:16,
       color:'white',
       fontFamily:'NunitoSans-Bold',
-      width:(windowHeight) / 3,
+      width:'85%'
     },
     icon:{height:20,width:20,marginRight:5,marginTop:15},
     button:{marginTop:25,marginBottom:15,backgroundColor:'white',height:50,justifyContent:'center',alignItems:'center',borderRadius:10, shadowOffset: {height: 7,width:5},elevation: 10},

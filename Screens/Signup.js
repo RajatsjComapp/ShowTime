@@ -16,9 +16,12 @@ import styles from '../styles/GlobalStyle.js'
 import Signin from './Signin.js';
 import firebase from 'firebase'
 import 'firebase/firestore';
+import {useSelector,useDispatch} from 'react-redux'
+
 import FirebaseConnectivity from '../utils/firebaseAuth.js'
 
 FirebaseConnectivity();
+
 
 export default function Signup({navigation}) 
 {
@@ -33,6 +36,8 @@ export default function Signup({navigation})
     UpdateSecureTextEntry(!ConfirmSecureTextEntry)
     }
 
+
+
 storeData=()=> {
   firebase.database().ref('Users/').set({
     username,
@@ -40,8 +45,9 @@ storeData=()=> {
   }).then(firebase.auth().createUserWithEmailAndPassword(email,Password)
       .then(()=>
       {
+        dispatch({type:"Login",payload:true})
         navigation.navigate('Dash')
-        
+        console.log(isLoggedin)
       })
       .catch(()=>{
         Alert.alert("Signup Failed",'')
@@ -76,6 +82,7 @@ btnSignUpTapped = () =>
       storeData()
     }
 }
+
     return (
       <SafeAreaView>
         <ImageBackground source={image} style={styles.container}>

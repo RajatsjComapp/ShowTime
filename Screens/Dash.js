@@ -5,8 +5,13 @@ import {
 import Browse from './Browse.js';
 import Library from './Library.js';
 import Explore from './Explore.js';
-import Television from '../Screens/Television.js'
+import Listing from '../Reusable/Listing'
+import Details from '../Reusable/Details'
+import Display from '../Section/Display'
+import MoviesStack from '../Navigation/MovieStack.js'
+import TVStack from '../Navigation/TVStack.js'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 import { color } from 'react-native-reanimated';
 
 
@@ -15,20 +20,23 @@ export default function Dash()
     const Tab = createBottomTabNavigator();
     return(
         <Tab.Navigator
-        initialRouteName="Browse"
+        initialRouteName="MoviesStack"
         tabBarOptions={{
-          activeTintColor: '#ff6600',
+          activeTintColor: '#D9FFFFFF',
+          activeBackgroundColor:'#192841',
+          style:{backgroundColor:'#BF0000'},
+          labelStyle:{fontSize:13,fontFamily:'NunitoSans-Black'}
         }}
         >
-          <Tab.Screen name="Movie"
-            component={Browse}
+          <Tab.Screen name="MoviesStack"
+            component={MoviesStack}
             
             options={{
               tabBarLabel: 'Home',
               tabBarIcon: ({ tintColor }) => (
                 <Image
                   source={require('../icons/TabBar/Browse.png')}
-                  style={{width: 26, height: 26}}
+                  style={{width: 30, height: 30,backgroundColor:tintColor,marginTop:6,resizeMode:"contain",}}
                 />
 
               ) 
@@ -37,10 +45,10 @@ export default function Dash()
   
           
           />
-          <Tab.Screen name="TV"
-            component={Television}
+          <Tab.Screen name="TVStack"
+            component={TVStack}
             options={{
-              tabBarLabel: 'TV',
+              tabBarLabel: 'T.V.',
               tabBarIcon: ({ tintColor }) => (
                 <Image
                   source={require('../icons/TabBar/Library.png')}
@@ -74,7 +82,10 @@ export default function Dash()
             }}
           />
           
+          
         </Tab.Navigator>
-      
+
+
+
     );
 }

@@ -7,7 +7,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import Listing from '../Reusable/Listing.js';
 import Details from '../Reusable/Details';
 import ImageSlider from '../ImageSlider.js';
-export default function Browse ({navigation})
+export default function Television ({navigation})
 {
 
   return (
