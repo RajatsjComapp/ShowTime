@@ -1,20 +1,14 @@
 const initState ={
-    LoggedIn:false
+    LoggedIn:''
 }
 export const Reducer = (state=initState,action) =>
 {
     switch(action.type)
     {
-        case 'logout':
-        return{
-            LoggedIn:action.payload
-        }
-        case 'Login':
-        return
-        {
-            LoggedIn:action.payload
-        }
-           
+    case 'logout':
+        return {...state,LoggedIn:action.payload}
+    case 'login':
+        return{...state,LoggedIn:actiopayload}
     }
-    return state
+return state   
 }

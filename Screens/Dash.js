@@ -15,12 +15,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { color } from 'react-native-reanimated';
 
 
-export default function Dash()
+export default function Dash({navigation})
 {
     const Tab = createBottomTabNavigator();
     return(
         <Tab.Navigator
-        initialRouteName="MoviesStack"
         tabBarOptions={{
           activeTintColor: '#D9FFFFFF',
           activeBackgroundColor:'#192841',
@@ -33,6 +32,7 @@ export default function Dash()
             
             options={{
               tabBarLabel: 'Home',
+              unmountOnBlur:true,
               tabBarIcon: ({ tintColor }) => (
                 <Image
                   source={require('../icons/TabBar/Browse.png')}
@@ -49,6 +49,7 @@ export default function Dash()
             component={TVStack}
             options={{
               tabBarLabel: 'T.V.',
+              unmountOnBlur:true,
               tabBarIcon: ({ tintColor }) => (
                 <Image
                   source={require('../icons/TabBar/Library.png')}
@@ -61,6 +62,7 @@ export default function Dash()
            component={Explore}
             options={{
               tabBarLabel: 'Explore',
+              unmountOnBlur:true,
               tabBarIcon: ({ tintColor }) => (
                 <Image
                   source={require('../icons/TabBar/Explore.png')}
@@ -73,6 +75,7 @@ export default function Dash()
             component={Library}
             options={{
               tabBarLabel: 'Library',
+              unmountOnBlur:true,
               tabBarIcon: ({ tintColor }) => (
                 <Image
                   source={require('../icons/TabBar/Library.png')}

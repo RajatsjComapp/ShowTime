@@ -9,7 +9,6 @@ export default function AuthStack ()
     const AuthStack = createStackNavigator();
     const otherStack = createStackNavigator();
     return(
-    
       <AuthStack.Navigator initialRouteName="Signup" screenOptions={{ headerShown: false }}>
            <AuthStack.Screen name="Signup" component={Signup} />
            <AuthStack.Screen name="Signin" component={Signin}/>

@@ -5,7 +5,12 @@ var windowHeight = Dimensions.get('window').height;
 export default styles = StyleSheet.create({
     container: {
       flex:1,
-      height: windowHeight
+      height: windowHeight,
+      width: windowWidth
+    },
+    splashstyle: {
+      height: windowHeight,
+      width: windowWidth
     },
     LayeredConatiner: {
       flex:1,

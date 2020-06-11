@@ -12,9 +12,6 @@ export default function Television ({navigation})
 
   return (
     <SafeAreaView style={styles.container}>
-       <View style={styles.Header}>
-        <Text style={styles.HeaderText}>Television</Text>
-      </View>
       <ScrollView>
         <View style={{flexDirection:'row',justifyContent:'space-between'}}>
         <Text style={styles.Menu}>Popular</Text> 

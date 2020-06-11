@@ -8,7 +8,8 @@ import {
   Image,
   TouchableOpacity,
   ScrollView,
-  Alert
+  Alert,
+  StatusBar
 } from 'react-native';
 import image from '../GlobalImage/BackgroundImage.jpg'
 import image1 from '../GlobalImage/RedImage.jpg'
@@ -26,7 +27,7 @@ const ShowPassword = () => {
     }
 
 
-fetchData=()=> {
+const fetchData=()=> {
       firebase.auth().signInWithEmailAndPassword(email,password)
       .then(()=>
       {
@@ -41,7 +42,7 @@ fetchData=()=> {
     }
     
 
-btnLoginTapped = () => {
+const btnLoginTapped = () => {
     const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const regPassword = /^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+).{5,}$/;
     const regName = /^[^!-\/:-@\[-`{-~]*$/;
@@ -58,7 +59,7 @@ btnLoginTapped = () => {
   }
     return (
       <SafeAreaView>
-        <ImageBackground source={image} style={styles.container}>
+        <ImageBackground source={image}style={styles.container}>
         </ImageBackground>
         <View style={styles.LayeredConatiner}>
         <ImageBackground source={image1} style={styles.container}>

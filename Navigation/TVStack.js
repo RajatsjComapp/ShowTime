@@ -12,7 +12,17 @@ export default function TVStack() {
 
     const MovieStack = createStackNavigator();
     return(
-      <MovieStack.Navigator initialRouteName="Television" screenOptions={{ headerShown: false }}>
+      <MovieStack.Navigator initialRouteName="Television" screenOptions={{
+        headerStyle: {
+          backgroundColor: '#BF0000',
+        },
+        headerTitleAlign:'center',
+        headerTitleStyle:
+        {
+          fontFamily:'NunitoSans-Black',
+        },
+        headerTintColor: '#fff',
+      }}>
         <MovieStack.Screen name="Television" component={Television} />
         <MovieStack.Screen name="Display" component={Display} />
         <MovieStack.Screen name="Listing" component={Listing} />

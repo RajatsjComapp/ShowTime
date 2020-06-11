@@ -65,9 +65,6 @@ export default Listing = (props) =>
 
     return (
       <View style={styles.container}>
-      <View style={styles.Header}>
-      <Text style={styles.HeaderText}>More</Text>
-       </View>
         {loading ? (
           <ActivityIndicator size="large" />
         ) : (

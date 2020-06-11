@@ -7,17 +7,16 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import Listing from '../Reusable/Listing.js';
 import Details from '../Reusable/Details';
 import ImageSlider from '../ImageSlider.js';
+import {useSelector} from 'react-redux'
 import { createStackNavigator } from '@react-navigation/stack';
 
-export default function Browse ({navigation})
+export default function Movies ({navigation})
 {
-
+  const isLoggedin = useSelector((state)=>{return state.LoggedIn})
+  console.log(isLoggedin)
   return (
 
     <SafeAreaView style={styles.container}>
-       <View style={styles.Header}>
-        <Text style={styles.HeaderText}>Movie</Text>
-      </View>
       <ScrollView>
         <View style={{flexDirection:'row',justifyContent:'space-between'}}>
         <Text style={styles.Menu}>Popular</Text> 

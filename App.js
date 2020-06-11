@@ -9,6 +9,7 @@ import {createStore} from 'redux'
 import AuthStack from './Navigation/AuthStack.js'
 import { Provider } from 'react-redux';
 import { Reducer } from './Reducer/Reducer.js';
+import Splash from './Screens/Splash.js'
 
 const store = createStore(Reducer);
 export default function App() {
@@ -17,9 +18,10 @@ export default function App() {
   return(
     <Provider store={store}>
     <NavigationContainer>
-    <Stack.Navigator initialRouteName="AuthStack"  screenOptions={{ headerShown: false}}>
-      <Stack.Screen name="AuthStack" component={AuthStack} />
-      <Stack.Screen name="Dash" component={Dash} />
+    <Stack.Navigator initialRouteName={Splash} screenOptions={{ headerShown: false}}>
+    <Stack.Screen name="Splash" component={Splash} />
+    <Stack.Screen name="AuthStack" component={AuthStack} />
+    <Stack.Screen name="Dash" component={Dash} />
     </Stack.Navigator>
   </NavigationContainer>
   </Provider>

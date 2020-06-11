@@ -9,13 +9,15 @@ import {
   TouchableOpacity,
   ScrollView,
   Alert,
+  AsyncStorage
 } from 'react-native';
 import image from '../GlobalImage/BackgroundImage.jpg'
 import image1 from '../GlobalImage/RedImage.jpg'
 import styles from '../styles/GlobalStyle.js'
 import Signin from './Signin.js';
-import firebase from 'firebase'
+import firebase, { app } from 'firebase'
 import 'firebase/firestore';
+import Dash from './Dash.js'
 import {useSelector,useDispatch} from 'react-redux'
 
 import FirebaseConnectivity from '../utils/firebaseAuth.js'
@@ -25,37 +27,28 @@ FirebaseConnectivity();
 
 export default function Signup({navigation}) 
 {
+
   const [username, setUser] = useState("");
   const [Password, setPassword] = useState(" ");
   const [ConfirmPassword, setCPassword] = useState("");
   const [email, setEmail] = useState("");
   const [Error,seterror] = useState("Email Already Exist")
   const [ConfirmSecureTextEntry,UpdateSecureTextEntry]=useState(true)
-
   const ShowPassword = () => {
     UpdateSecureTextEntry(!ConfirmSecureTextEntry)
     }
 
-
-
 storeData=()=> {
-  firebase.database().ref('Users/').set({
-    username,
-    email
-  }).then(firebase.auth().createUserWithEmailAndPassword(email,Password)
+firebase.auth().createUserWithEmailAndPassword(email,Password)
       .then(()=>
       {
-        dispatch({type:"Login",payload:true})
         navigation.navigate('Dash')
-        console.log(isLoggedin)
       })
-      .catch(()=>{
-        Alert.alert("Signup Failed",'')
+      .catch((e)=>{
+        Alert.alert("Signup Failed",'Invalid or Already Registered Email')
       }
       )
-  )
 }
-
 btnSignUpTapped = () =>
 {
     const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
