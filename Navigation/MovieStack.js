@@ -7,6 +7,7 @@ import Movies from '../Screens/Browse.js';
 import Listing from '../Reusable/Listing'
 import Details from '../Reusable/Details'
 import Display from '../Section/Display'
+import MovieTrailer from "../Reusable/MovieTrailer.js";
 
 export default function MoviesStack() {
 
@@ -27,6 +28,7 @@ export default function MoviesStack() {
         <MovieStack.Screen name="Display" component={Display} />
         <MovieStack.Screen name="Listing" component={Listing} />
         <MovieStack.Screen name="Details" component={Details} />
+        <MovieStack.Screen name="MovieTrailer" component={MovieTrailer} />
       </MovieStack.Navigator>
     
     );

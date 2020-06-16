@@ -9,22 +9,9 @@ export const styles = StyleSheet.create({
       height: windowHeight,
       backgroundColor:'#192841',
     },
-    Header:
-    {
-      height: (windowHeight)/14,
-      backgroundColor:'#BF0000',
-      alignItems:'center'
-    },
-    HeaderText:
-    {
-     fontSize:25,
-     fontFamily:'NunitoSans-Black',
-     color:'white',
-     margin:6
-    },
     Menu:
     {
-      fontSize:20,
+      fontSize:22,
       fontFamily:'NunitoSans-Black',
       color:'yellow',
       margin:15
@@ -62,11 +49,13 @@ export const styles = StyleSheet.create({
     },
     OverviewText:
     {
-      fontSize:15,
+      fontSize:16,
       fontFamily:'NunitoSans-BoldItalic',
       color:'white',
       margin:15
     },
     infodata:{color:'white',fontWeight:'bold'},
     info:{fontSize:16,fontWeight: 'bold',color:'yellow'},
+    Logoutbutton:{margin:25,backgroundColor:'white',height:50,justifyContent:'center',alignItems:'center',borderRadius:10, shadowOffset: {height: 7,width:5},elevation: 10},
+    LogoutbuttonText:{color:'red',fontSize:18,fontFamily:'NunitoSans-Black'},
   });

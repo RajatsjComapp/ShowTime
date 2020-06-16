@@ -21,9 +21,9 @@ export default function Explore ({navigation})
   return (
   
     <SafeAreaView style={styles.container}>
-       <View style={{alignItems:'center'}}>
+       <View style={styles.Logoutbutton}>
         <TouchableOpacity onPress={()=>logout()}>
-          <Text style={styles.Heading}>More</Text></TouchableOpacity>
+          <Text style={styles.LogoutbuttonText}>Logout</Text></TouchableOpacity>
         </View>
 
 

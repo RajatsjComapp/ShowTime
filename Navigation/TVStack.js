@@ -7,6 +7,7 @@ import Television from '../Screens/Television';
 import Listing from '../Reusable/Listing'
 import Details from '../Reusable/Details'
 import Display from '../Section/Display'
+import TVTrailer from '../Reusable/TVTrailer'
 
 export default function TVStack() {
 
@@ -27,6 +28,7 @@ export default function TVStack() {
         <MovieStack.Screen name="Display" component={Display} />
         <MovieStack.Screen name="Listing" component={Listing} />
         <MovieStack.Screen name="Details" component={Details} />
+        <MovieStack.Screen name="TVTrailer" component={TVTrailer} />
       </MovieStack.Navigator>
     
     );

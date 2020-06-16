@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   SafeAreaView,
+  StatusBar
 } from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'

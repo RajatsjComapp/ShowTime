@@ -21,6 +21,7 @@ export default function Dash({navigation})
     return(
         <Tab.Navigator
         tabBarOptions={{
+          
           activeTintColor: '#D9FFFFFF',
           activeBackgroundColor:'#192841',
           style:{backgroundColor:'#BF0000'},
@@ -36,7 +37,7 @@ export default function Dash({navigation})
               tabBarIcon: ({ tintColor }) => (
                 <Image
                   source={require('../icons/TabBar/Browse.png')}
-                  style={{width: 30, height: 30,backgroundColor:tintColor,marginTop:6,resizeMode:"contain",}}
+                  style={{width: 30, height: 30,backgroundColor:tintColor,marginTop:6}}
                 />
 
               ) 
@@ -61,7 +62,7 @@ export default function Dash({navigation})
           <Tab.Screen name="Explore"
            component={Explore}
             options={{
-              tabBarLabel: 'Explore',
+              tabBarLabel: 'Setting',
               unmountOnBlur:true,
               tabBarIcon: ({ tintColor }) => (
                 <Image
@@ -71,7 +72,7 @@ export default function Dash({navigation})
               ) 
             }}
           />
-          <Tab.Screen name="Library"
+          {/* <Tab.Screen name="Library"
             component={Library}
             options={{
               tabBarLabel: 'Library',
@@ -83,7 +84,7 @@ export default function Dash({navigation})
                 />
               ) 
             }}
-          />
+          /> */}  
           
           
         </Tab.Navigator>
